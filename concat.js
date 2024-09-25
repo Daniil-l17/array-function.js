@@ -1,6 +1,6 @@
-function customConcat(array1, array2) {
-  if (!Array.isArray(array1) && !Array.isArray(array2)) {
+Array.prototype.myConcat = function customConcat(array) {
+  if (!Array.isArray(array)) {
     throw new Error('должен быть масивом')
   }
-  return [...array1, ...array2]
+  return [...this, ...array]
 }
